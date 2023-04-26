@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'Manrope-SemiBold';
+    src: url('../assets/fonts/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: 'SemiBold';
+    line-height: 21.86px;
+}
+
+@font-face {
+    font-family: 'Manrope-Bold';
+    src: url('../assets/fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: 'Bold';
+    line-height: 21.86px;
+}
+
+@font-face {
+    font-family: 'Manrope-ExtraBold';
+    src: url('../assets/fonts/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: 'ExtraBold';
+    line-height: 78.8px;
+}
+
+@font-face {
+    font-family: 'Manrope-Medium';
+    src: url('../assets/fonts/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: 'Medium';
+    line-height: 24px;
+}
+
+:root {
+    --bodyBackground: #F0F5F5;
+    --headerMenuText: #133047;
+    --gradientFirst: #07A2AC;
+    --gradientSecond: #74B8BC;
+    --buttonText: #FFFFFF;
+    --homePageTitleText: #133047;
+    --homePageSubTitleText: #FFFFFF;
+    --homePageText: #474747;
+    --titleText: #133047;
+    --footer: #133047;
+}
+
+body {
+    height: 3000px;
+    background-color: var(--bodyBackground);
+    background-image:
+        url("../assets/images/ic_bg_cloud_one.svg"),
+        url("../assets/images/ic_bg_cloud_one.svg"),
+        url("../assets/images/ic_bg_cloud_one.svg"),
+        url("../assets/images/ic_bg_cloud_two.svg"),
+        url("../assets/images/ic_bg_cloud_three.svg"),
+        url("../assets/images/ic_bg_ellipse.svg"),
+        url("../assets/images/ic_bg_ellipse.svg"),
+        url("../assets/images/ic_bg_ellipse.svg"),
+        url("../assets/images/ic_bg_ellipse.svg");
+    background-position:
+        left 52.708333333333336% top 150px,
+        left 158px top 226px,
+        right 100.9px top 278px,
+        left -37px top 624px,
+        left 44.0625% top 665px,
+        right -372px top 104px,
+        left -144px top 465px,
+        left 169px top 1769px,
+        right 67px top 2670px;
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat;
+    background-size:
+        73px 36px,
+        93.1px 48.1px,
+        93.1px 48.1px,
+        160.8px 48.1px,
+        191px 80px,
+        856px 856px,
+        856px 856px,
+        856px 856px,
+        856px 856px;
+    margin: auto;
+    min-width: 1200px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 243px;
+    height: 45px;
+    margin: 24px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header nav li {
+    float: left;
+    display: block;
+    color: var(--headerMenuText);
+    font-size: 16px;
+    font-family: 'Manrope-SemiBold';
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    margin: 36px 22px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+header .feedbackAndLocal {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button {
+    display: inline;
+    background: linear-gradient(90deg, var(--gradientFirst) 0%, var(--gradientSecond) 100%);
+    color: var(--buttonText);
+    padding: 17px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Manrope-SemiBold';
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+header .feedbackAndLocal .pickLocale {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Manrope-Bold';
+    font-weight: 700;
+    margin-left: 26px;
+    margin-right: 24px;
+}
+
+
+header .feedbackAndLocal .pickLocale span {
+    margin-right: 2px;
+}
+
+header .feedbackAndLocal .pickLocale .arrow {
+    transform: rotate(360deg);
+    transition-duration: 0.3s;
+    width: 24px;
+    height: 24px;
+}
+
+header .feedbackAndLocal .pickLocale:hover .arrow {
+    transform: rotate(180deg);
+}
+
+
+.helpButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+    position: fixed;
+    bottom: 30px;
+    right: 0px;
+}
+
+.helpButton a {
+    background: linear-gradient(90deg, var(--gradientFirst) 0%, var(--gradientSecond) 100%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 10px 30px;
+}
+
+.helpButton .upButton {
+    display: none;
+}
+
+.helpButton .upButton.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homePage {
+    margin-top: 135px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1200px;
+    width: 62.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.homePage .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 112px;
+}
+
+.homePage .content .title {
+    font-family: 'Manrope-ExtraBold';
+    font-weight: 800;
+    font-size: 49px;
+    color: var(--homePageTitleText);
+    margin-top: 20px;
+    margin-left: 7.45px;
+}
+
+.homePage .content .subtitle {
+    background-image: url("../assets/images/ic_what_we_do_subtitle.svg");
+    background-repeat: no-repeat;
+    background-size: 310px 75px;
+    height: 75px;
+    width: 310px;
+    font-family: 'Manrope-ExtraBold';
+    font-weight: 800;
+    font-size: 49px;
+    color: var(--homePageSubTitleText);
+    margin-left: 7.45px;
+    text-align: center;
+}
+
+.homePage .content .text {
+    font-family: 'Manrope-Medium';
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--homePageText);
+    margin-top: 32px;
+    margin-left: 7.45px;
+    margin-bottom: 32px;
+}
+
+.whatWeDoTopSpacer {
+    margin-top: 335px;
+}
+
+.whatWeDo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1200px;
+    width: 62.5%;
+}
+
+.implementedProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1200px;
+    width: 62.5%;
+}
+
+.testSpacer {
+    margin-top: 700px;
+}
+
+.title {
+    font-family: 'Manrope-ExtraBold';
+    font-weight: 800;
+    font-size: 36px;
+    color: var(--titleText);
+}
